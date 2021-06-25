@@ -1,0 +1,55 @@
+.body{
+    position: relative;
+}
+
+.navbar{
+    display: flex;
+    position: relative;
+}
+
+.nav-right{
+    position: absolute;
+    right: 10%;
+}
+
+.nav-right p {
+    font-size: 20px;
+    color: white;
+}
+.weather-box{
+    margin-top: 10vh;
+    box-shadow : 0 0 10px;
+    background-color: rgb(100, 190, 206);
+    width: 30%;
+    height: 50vh;
+}
+
+
+.weather-info{
+     
+}
+
+.footer-main{
+    position: absolute;
+    bottom: 0%;
+    width: 100%;
+}
+
+.sidebar-main{
+    width: 15%;
+    height: 85vh;
+    background-color: rgb(189, 181, 181);
+}
+
+.offcanvas{
+    width: 15%;
+}
+
+@media only screen and (max-width: 600px) {
+    .weather-main{
+        width: 70%;
+        
+    }
+
+    
+  }

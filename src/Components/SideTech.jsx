@@ -12,7 +12,7 @@ function SideTech() {
 
     return (
         <div className="sidetech-main  ">
-            <div className="mb-3 bg-dark"><h4 className="text-danger">Technologies Used</h4></div>
+            <div className="mb-3 bg-dark"><h4 className=" sidetech-title text-danger">Technologies Used</h4></div>
 
             <div>
                 <div className="sidetech-ulist d-flex flex-column ">
@@ -20,7 +20,7 @@ function SideTech() {
                         <FaReact className=" react-icon mx-auto" />
                         <p>React Js</p>
                     </div>
-                    <div className="d-flex flex-column tech-list">
+                    <div className="d-flex flex-column tech-list-axios">
                         <img src={axiosLogo} width={100} className="mx-auto" />
                         <p className="mt-2">Fetching <br />Data</p>
                     </div>

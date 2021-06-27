@@ -2,7 +2,7 @@ import React from 'react'
 
 export const Forecast = () => {
     return (
-        <div>
+        <div className="forecast-main d-flex ">
 
         </div>
     )

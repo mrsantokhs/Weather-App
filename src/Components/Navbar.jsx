@@ -7,10 +7,10 @@ import weatherlogo from "../Assets/weatherlogo.png"
 const Navbar = () => {
     return (
         <div>
-            <nav class="navbar bg-dark navbar-dark d-flex  ">
+            <nav className="navbar bg-dark navbar-dark d-flex  ">
 
 
-                <div class="navbar-brand">
+                <div className="navbar-brand">
                     <h3> <img src={weatherlogo} width={70} /> Weather Finder</h3></div>
 
 

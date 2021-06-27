@@ -11,13 +11,16 @@ function App() {
         <div >
             <Navbar />
 
-            <div className=" page-center ">
+            <div className="page-center ">
+                <div className="index-sidetech">
+                    <SideTech />
+                </div>
 
-                <SideTech />
 
                 <WeatherBox />
 
-                < CitiesWeather className="index-cities" />
+                <CitiesWeather className="index-cities" />
+
 
 
             </div>

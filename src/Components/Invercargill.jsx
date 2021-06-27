@@ -20,8 +20,8 @@ function Invercargill() {
     return (
         <div>
             <FiSun className="cities-weathericons" />
-            <h3>Invercargill</h3>
-            <h2>{city.temp}&#176;C</h2>
+            <h3 className="cities-cityname">Invercargill</h3>
+            <h2 className="cities-temp">{city.temp}&#176;C</h2>
         </div>
     )
 }

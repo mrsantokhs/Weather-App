@@ -5,6 +5,8 @@ import axios from "axios"
 import { ImLocation } from 'react-icons/im';
 import { FcSearch } from 'react-icons/fc';
 import { GiPaperWindmill } from "react-icons/gi"
+import tempIcon from "../Assets/temp.svg"
+
 
 
 
@@ -14,7 +16,17 @@ const WeatherBox = () => {
     const [city, setCity] = useState()
     const [search, setSearch] = useState('Christchurch')
 
+    const date = new Date();
+    const weekday = new Array(7);
+    weekday[0] = "Sunday";
+    weekday[1] = "Monday";
+    weekday[2] = "Tuesday";
+    weekday[3] = "Wednesday";
+    weekday[4] = "Thursday";
+    weekday[5] = "Friday";
+    weekday[6] = "Saturday";
 
+    const day = weekday[date.getDay()];
 
     useEffect(() => {
 
@@ -38,34 +50,46 @@ const WeatherBox = () => {
     return (
         <div className="weather-box ">
             <div className="input-data  justify-content-center  d-flex ">
-                <input className="form-control w-50  mt-3" type="search" placeholder="Search by City" aria-label="Search" onChange={(event) => { setSearch(event.target.value) }} />
+                <input className=" weather-input form-control   mt-3" type="search" placeholder="Search by City" aria-label="Search" onChange={(event) => { setSearch(event.target.value) }} />
 
 
 
             </div>
 
-            <div className="weather-info  d-flex h-100   ">
-                {!city ? (<div class="spinner-border" role="status">
+            <div className="weather-info  d-flex    mx-auto  ">
+                {!city ? (<div class="spinner-border mx-auto" role="status">
                     <span class="visually-hidden">Loading...</span>
                 </div>)
                     :
                     (
-                        <div className=" text-light">
+                        <div className="text-light w-100 h-100">
 
-                            <div >
-                                {city.weather.map((weather) => (
-                                    <div ><img src={`http://openweathermap.org/img/w/${weather.icon}.png`} width={80} /></div>
-                                ))}
-                            </div>
+                            <h3 className="weather-location text-danger">
 
-                            <h3 className="weather-location">
-
-                                <ImLocation class="location-icon" />
+                                <ImLocation className="location-icon" />
 
                                 {search}, {city.sys.country}
                             </h3>
-                            <h1 className="weather-temp">{city.main.temp}&#176;C</h1>
-                            <p class="weather-wind"><GiPaperWindmill class="wind-icon" /> Wind:{city.wind.speed}</p>
+
+                            {city.weather.map((weather) => (
+                                <div key={weather}><img src={`http://openweathermap.org/img/w/${weather.icon}.png`} width={80} /></div>
+                            ))}
+
+
+
+                            <div className="d-flex w-100 justify-content-center">
+                                <img src={tempIcon} height={60} className="temp-icon" />
+                                <h1 className="weather-temp ">  {city.main.temp}&#176;C</h1>
+                            </div>
+                            <h4>Day: {day}</h4>
+
+                            <p className="weather-wind"><GiPaperWindmill class="wind-icon" /> Wind:{city.wind.speed}</p>
+
+
+
+
+
+
                             {/*<div >
                                 {city.weather.map((weather) => (
                                     <div >{weather.main}</div>

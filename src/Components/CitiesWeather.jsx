@@ -9,14 +9,14 @@ const CitiesWeather = () => {
 
     return (
         <div className="cities-main  ">
-            <div>
+            <div className="cities-box">
                 <AucklandWeather />
             </div>
 
-            <div>
+            <div className="cities-box">
                 <WellingtonWeather />
             </div>
-            <div>
+            <div className="cities-box">
                 <Invercargill />
             </div>
         </div>

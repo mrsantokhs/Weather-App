@@ -1,3 +1,38 @@
 .page-center {
   display: flex;
 }
+.index-sidetech {
+  margin-left: 10vh;
+  margin-top: 5vh;
+}
+
+/*---------> Mobile Screen (600px) <------------ */
+@media only screen and (max-width: 600px) {
+  .page-center {
+    flex-direction: column;
+  }
+  .index-sidetech {
+    display: none;
+  }
+}
+/*---------> Medium Screen (max 768px) <------------ */
+@media (min-width: 601px) and (max-width: 800px) {
+  .index-sidetech {
+    display: none;
+  }
+}
+
+/*---------> Medium Screen (max 992px) <------------ */
+@media (min-width: 801px) and (max-width: 992px) {
+  .index-sidetech {
+    margin-left: 5vh;
+    margin-top: 5vh;
+  }
+}
+
+/*---------> Medium Screen (max 1200px) <------------ */
+@media (min-width: 993px) and (max-width: 1200px) {
+}
+/*---------> Medium Screen (max 14000px) <------------ */
+@media (min-width: 1201px) and (max-width: 1400px) {
+}

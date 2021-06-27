@@ -30,8 +30,9 @@ function AucklandWeather() {
                         <div ><img src={`http://openweathermap.org/img/w/${weather.icon}.png`} /></div>
                     ))}
                     </div> */}
-                <h3>Auckland</h3>
-                <h2>{city.temp}&#176;C</h2>
+                <FiSun className="cities-weathericons" />
+                <h3 className="cities-cityname">Auckland</h3>
+                <h2 className="cities-temp">{city.temp}&#176;C</h2>
 
             </div>
         </div>

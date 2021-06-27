@@ -25,10 +25,14 @@
   margin-top: 10vh;
   margin-left: 20%;
   box-shadow: 0 0 15px;
-  background-color: rgba(0, 0, 0, 0.609);
+
   width: 30%;
   height: 60vh;
   background-image: linear-gradient(45deg, rgb(6, 148, 230), orange);
+}
+
+.weather-input {
+  width: 50%;
 }
 
 .search-icon {
@@ -37,16 +41,29 @@
 
 .weather-info {
   margin-top: 10%;
-  justify-content: center;
+  width: 75%;
+}
+.weather-leftright-display {
+  position: relative;
 }
 
 .weather-wind {
-  font-size: 24px;
-  font-weight: bold;
+  font-size: 20px;
+}
+.weather-rightside {
+  position: absolute;
+  right: 0%;
+}
+
+.weather-rightside h1 {
+  font-size: 50px;
 }
 
 .location-icon {
   animation: rotate 1s linear infinite alternate;
+}
+.temp-icon {
+  font-size: 40px;
 }
 
 @keyframes rotate {
@@ -68,8 +85,18 @@
   margin-left: 5%;
   margin-top: 2%;
 }
+.sidetech-title {
+  overflow: hidden;
+}
+.bootstrap-icon {
+  font-size: 40px;
+  color: rgb(0, 81, 255);
+}
 
 .tech-list {
+  margin-bottom: 7%;
+}
+.tech-list-axios {
   margin-bottom: 7%;
 }
 
@@ -78,13 +105,6 @@
   color: rgb(8, 195, 241);
 }
 
-.bootstrap-icon {
-  font-size: 50px;
-  color: rgb(8, 109, 241);
-}
-
-.sidetech-ulist li {
-}
 .sidebar-main {
   width: 15%;
   height: 85vh;
@@ -114,9 +134,223 @@
   width: 100%;
 }
 
+/*---------> Mobile Screen (600px) <------------ */
 @media only screen and (max-width: 600px) {
+  .navbar {
+    width: 100%;
+  }
+  .navbar-brand img {
+    width: 50px;
+  }
+  .weather-input {
+    width: 70%;
+  }
+  .nav-right {
+    display: none;
+  }
   .weather-box {
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 7vh;
     width: 70%;
     height: 60vh;
+  }
+  .cities-main {
+    display: flex;
+    flex-direction: row;
+
+    text-align: center;
+    width: 80%;
+    margin-top: 8vh;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100%;
+  }
+  .cities-weathericons {
+    font-size: 40px;
+  }
+  .cities-box {
+    width: 40%;
+  }
+  .cities-cityname {
+    font-size: 16px;
+  }
+  .cities-temp {
+    font-size: 14px;
+  }
+  .footer-main {
+    margin-top: 10%;
+  }
+}
+
+/*---------> Medium Screen (max 800px) <------------ */
+@media (min-width: 601px) and (max-width: 800px) {
+  .navbar {
+    width: 100%;
+  }
+  .weather-box {
+    justify-content: center;
+    margin-left: 10%;
+
+    width: 50%;
+  }
+  .weather-input {
+    width: 70%;
+  }
+  .cities-main {
+    text-align: center;
+    width: 25%;
+
+    height: 60vh;
+  }
+  .cities-weathericons {
+    font-size: 40px;
+  }
+
+  .cities-cityname {
+    font-size: 20px;
+  }
+  .cities-temp {
+    font-size: 16px;
+  }
+}
+
+/*---------> Medium Screen (max 992px) <------------ */
+@media (min-width: 801px) and (max-width: 992px) {
+  .weather-box {
+    justify-content: center;
+    margin-left: 10%;
+
+    width: 50%;
+  }
+  .weather-input {
+    width: 60%;
+  }
+  .cities-main {
+    text-align: center;
+    width: 25%;
+    margin-left: 5%;
+    height: 60vh;
+  }
+  .cities-weathericons {
+    font-size: 40px;
+  }
+
+  .cities-cityname {
+    font-size: 20px;
+  }
+  .cities-temp {
+    font-size: 16px;
+  }
+  .sidetech-main {
+    width: 20vh;
+    height: 100%;
+    border: 2px solid black;
+    box-shadow: 0 0 8px;
+    margin-left: 10px;
+    margin-top: 0;
+  }
+  .sidetech-title {
+    font-size: 18px;
+  }
+  .tech-list {
+    margin-bottom: 4%;
+  }
+  .bootstrap-icon {
+    font-size: 26px;
+  }
+
+  .react-icon {
+    font-size: 26px;
+  }
+
+  .tech-list img {
+    width: 60px;
+  }
+  .tech-list-axios img {
+    width: 80px;
+  }
+  .tech-list p {
+    font-size: 14px;
+  }
+}
+
+/*---------> Medium Screen (max 1200px) <------------ */
+@media (min-width: 993px) and (max-width: 1200px) {
+  .weather-box {
+    justify-content: center;
+    margin-left: 10%;
+
+    width: 40%;
+  }
+  .sidetech-main {
+    width: 20vh;
+    height: 100%;
+
+    box-shadow: 0 0 8px;
+    margin-left: 10px;
+  }
+  .sidetech-title {
+    font-size: 20px;
+  }
+  .tech-list {
+    margin-bottom: 5%;
+  }
+  .bootstrap-icon {
+    font-size: 26px;
+  }
+
+  .react-icon {
+    font-size: 26px;
+  }
+
+  .tech-list img {
+    width: 60px;
+  }
+  .tech-list-axios img {
+    width: 80px;
+  }
+  .tech-list p {
+    font-size: 14px;
+  }
+  .cities-main {
+    text-align: center;
+    width: 25%;
+    margin-left: 5%;
+    height: 60vh;
+  }
+  .cities-weathericons {
+    font-size: 46px;
+  }
+
+  .cities-cityname {
+    font-size: 28px;
+  }
+  .cities-temp {
+    font-size: 20px;
+  }
+}
+/*---------> Medium Screen (max 14000px) <------------ */
+@media (min-width: 1201px) and (max-width: 1400px) {
+  .sidetech-main {
+    height: 100%;
+  }
+  .weather-box {
+    justify-content: center;
+    margin-left: 12%;
+
+    width: 35%;
+  }
+
+  .cities-weathericons {
+    font-size: 52px;
+  }
+
+  .cities-cityname {
+    font-size: 32px;
+  }
+  .cities-temp {
+    font-size: 24px;
   }
 }

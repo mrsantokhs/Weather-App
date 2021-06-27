@@ -1,55 +1,122 @@
-.body{
-    position: relative;
+.body {
+  position: relative;
 }
 
-.navbar{
-    display: flex;
-    position: relative;
+.navbar {
+  display: flex;
+  position: relative;
 }
 
-.nav-right{
-    position: absolute;
-    right: 10%;
+.navbar-brand {
+  font-size: 20px;
+  margin: 0 auto;
+}
+
+.nav-right {
+  position: absolute;
+  right: 10%;
 }
 
 .nav-right p {
-    font-size: 20px;
-    color: white;
+  font-size: 20px;
+  color: white;
 }
-.weather-box{
-    margin-top: 10vh;
-    box-shadow : 0 0 10px;
-    background-color: rgb(100, 190, 206);
-    width: 30%;
-    height: 50vh;
-}
-
-
-.weather-info{
-     
+.weather-box {
+  margin-top: 10vh;
+  margin-left: 20%;
+  box-shadow: 0 0 15px;
+  background-color: rgba(0, 0, 0, 0.609);
+  width: 30%;
+  height: 60vh;
+  background-image: linear-gradient(45deg, rgb(6, 148, 230), orange);
 }
 
-.footer-main{
-    position: absolute;
-    bottom: 0%;
-    width: 100%;
+.search-icon {
+  font-size: 30px;
 }
 
-.sidebar-main{
-    width: 15%;
-    height: 85vh;
-    background-color: rgb(189, 181, 181);
+.weather-info {
+  margin-top: 10%;
+  justify-content: center;
 }
 
-.offcanvas{
-    width: 15%;
+.weather-wind {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.location-icon {
+  animation: rotate 1s linear infinite alternate;
+}
+
+@keyframes rotate {
+  from {
+    transform: translateX(-0.6rem);
+  }
+  to {
+    transform: translateX(0.4rem);
+  }
+}
+
+.sidetech-main {
+  display: flex;
+  flex-direction: column;
+  width: 20vh;
+  height: 80vh;
+  border: 2px solid black;
+  box-shadow: 0 0 5px;
+  margin-left: 5%;
+  margin-top: 2%;
+}
+
+.tech-list {
+  margin-bottom: 7%;
+}
+
+.react-icon {
+  font-size: 50px;
+  color: rgb(8, 195, 241);
+}
+
+.bootstrap-icon {
+  font-size: 50px;
+  color: rgb(8, 109, 241);
+}
+
+.sidetech-ulist li {
+}
+.sidebar-main {
+  width: 15%;
+  height: 85vh;
+  background-color: rgb(189, 181, 181);
+}
+
+.offcanvas {
+  width: 15%;
+}
+
+.cities-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 10vh;
+  margin-left: 10%;
+  width: 10%;
+  height: 60vh;
+}
+
+.cities-weathericons {
+  font-size: 60px;
+}
+.footer-main {
+  position: absolute;
+  margin-top: 50px;
+  width: 100%;
 }
 
 @media only screen and (max-width: 600px) {
-    .weather-main{
-        width: 70%;
-        
-    }
-
-    
+  .weather-box {
+    width: 70%;
+    height: 60vh;
   }
+}

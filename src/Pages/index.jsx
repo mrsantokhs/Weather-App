@@ -1,22 +1,29 @@
 import React from "react"
 import Footer from "../Components/Footer"
 import Navbar from "../Components/Navbar"
-
+import SideTech from "../Components/SideTech"
 import WeatherBox from "../Components/WeatherBox"
-import Pages from "../Pages/Pages.css"
+import "../Pages/Pages.css"
+import CitiesWeather from "../Components/CitiesWeather"
 
 function App() {
     return (
         <div >
             <Navbar />
-          
-            
-            <WeatherBox/>
-           
 
-       
-            
-            <Footer/>
+            <div className=" page-center ">
+
+                <SideTech />
+
+                <WeatherBox />
+
+                < CitiesWeather className="index-cities" />
+
+
+            </div>
+
+
+            <Footer />
         </div>
     );
 }

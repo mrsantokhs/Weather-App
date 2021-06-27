@@ -5,9 +5,9 @@ const Footer = () => {
     return (
         <div>
             <footer className="footer-main">
-            <nav className="navbar fixed-bottom navbar-light bg-light ">
-               <p className="mx-auto">&#169; Developed by Sunny Singh</p>
-            </nav>
+                <nav className="navbar  navbar-light bg-light ">
+                    <p className="mx-auto">&#169; Developed by Sunny Singh</p>
+                </nav>
             </footer>
         </div>
     )

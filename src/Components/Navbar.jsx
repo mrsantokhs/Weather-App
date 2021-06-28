@@ -14,9 +14,9 @@ const Navbar = () => {
                     <h3> <img src={weatherlogo} width={70} /> Weather Finder</h3></div>
 
 
-                <div className="nav-right">
+                {/* <div className="nav-right">
                     <Link to="/projectdetails" > My Portfolio</Link>
-                </div>
+    </div>*/}
             </nav>
         </div>
     )
